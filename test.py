@@ -1,2 +1,3 @@
 a=1
-print("hello world",a)
+b=2
+print("hello world",a,b)
