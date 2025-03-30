@@ -3,7 +3,7 @@ import time
 m=1
 g=10
 u=0.1
-v=1
+v=10
 dt=0.01
 s=0
 all_time=0
@@ -28,7 +28,7 @@ while turn_off:
     else:
         time.time(dt)
         all_time=all_time+dt
-    print(f"\r time:{format(all_time,'4.4f')} {s} {v} {a}",end="")
+    print(f"\r time:{format(all_time,'4.4f')} {format(s,'4.8f')} {format(v,'4.8f')} {format(a,'4.8f')}",end="")
 
-    if all_time>10:
+    if all_time>15:
         turn_off=False
