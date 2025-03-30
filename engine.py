@@ -15,5 +15,5 @@ while turn_off:
     v0=v
     v=v+a*dt
     s=s+ v0*dt + 0.5*a*dt*dt
-    print(f"\r{s} {v} {a}")
-    time.sleep(0.01)
+    print(f"\r{s} {v} {a}",end="")
+    time.sleep(dt)
