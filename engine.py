@@ -1,5 +1,9 @@
 import time
 
+def calculate_force_F(target,now_status):
+    err=target-now_status
+
+
 m=1
 g=10
 u=0.1
