@@ -29,7 +29,7 @@ while turn_off:
     elif  add_f!=0:
         f=m*g*u*abs(add_f)/add_f*-1
         if abs(add_f)<abs(f):
-            add_f=-1*f
+            f=-1*add_f
 
     
     f=f+add_f
@@ -50,7 +50,7 @@ while turn_off:
     else:
         time.time(dt)
         all_time=all_time+dt
-    print(f"\r time:{format(all_time,'4.4f')} {format(s,'4.8f')} {format(v,'4.8f')} {format(a,'4.8f')}",end="")
+    print(f"\r time:{format(all_time,'4.4f')} s={format(s,'4.8f')} v={format(v,'4.8f')} a={format(a,'4.8f')}",end="")
 
     if all_time>100:
         turn_off=False
