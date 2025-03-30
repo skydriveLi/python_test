@@ -1,7 +1,10 @@
 import time
 
 def calculate_force_F(target,now_status):
+    kp=1
     err=target-now_status
+    f=err*kp
+    return f
 
 
 m=1
@@ -12,10 +15,19 @@ dt=0.01
 s=0
 all_time=0
 turn_off=True
+
+aim_target=10
+
 while turn_off:
+
     f=0
     if v!=0:
         f=m*g*u*abs(v)/v*-1
+
+    
+    add_f=calculate_force_F(aim_target,s)
+    f=f+add_f
+
     a=f/m
     v0=v
     v=v+a*dt
@@ -25,7 +37,7 @@ while turn_off:
         v=0
         dt_=abs(v0/a)
 
-    s=s+ v0*dt_ + 0.5*a*dt*dt_
+    s=s+ v0*dt_ + 0.5*a*dt_*dt_
     if dt_ > 0:
         time.sleep(dt_)
         all_time=all_time+dt_
