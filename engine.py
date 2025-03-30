@@ -1,4 +1,5 @@
 import time
+import PidControler
 
 def calculate_force_F(target,now_status):
     kp=0.1
@@ -18,10 +19,12 @@ running=True
 
 aim_target=100
 
+control=PidControler.PidControler()
+
 while running:
 
 
-    add_f=calculate_force_F(aim_target,s)
+    add_f=control.calculate_force_F(aim_target,s)
 
     f1=0
     if v!=0:
