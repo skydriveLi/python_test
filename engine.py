@@ -28,7 +28,7 @@ while turn_off:
         f=m*g*u*abs(v)/v*-1
     elif  add_f!=0:
         f=m*g*u*abs(add_f)/add_f*-1
-        if abs(add_f)<f:
+        if abs(add_f)<abs(f):
             add_f=-1*f
 
     
