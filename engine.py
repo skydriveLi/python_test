@@ -20,12 +20,18 @@ aim_target=100
 
 while turn_off:
 
+
+    add_f=calculate_force_F(aim_target,s)
+
     f=0
     if v!=0:
         f=m*g*u*abs(v)/v*-1
+    elif  add_f!=0:
+        f=m*g*u*abs(add_f)/add_f*-1
+        if abs(add_f)<f:
+            add_f=-1*f
 
     
-    add_f=calculate_force_F(aim_target,s)
     f=f+add_f
 
     a=f/m
