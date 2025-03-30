@@ -14,11 +14,11 @@ v=10
 dt=0.01
 s=0
 all_time=0
-turn_off=True
+running=True
 
 aim_target=100
 
-while turn_off:
+while running:
 
 
     add_f=calculate_force_F(aim_target,s)
@@ -53,4 +53,4 @@ while turn_off:
     print(f"\r time:{format(all_time,'4.4f')} s={format(s,'4.8f')} v={format(v,'4.8f')} a={format(a,'4.8f')}",end="")
 
     if all_time>100:
-        turn_off=False
+        running=False
