@@ -20,3 +20,13 @@ list2=['a',b,b]
 test_list.append(list1)
 test_list.append(list2)
 print(test_list)
+
+matrix_test=[[11,22,33],[11,22,33],[11,22,33]]
+for i in range(len(matrix_test)):
+    for j in range(len(matrix_test[0])):
+        matrix_test[i][j]=i+j*0.1
+
+for i in range(len(matrix_test)):
+    for j in range(len(matrix_test[0])):
+       print(matrix_test[i][j])
+print(matrix_test)
