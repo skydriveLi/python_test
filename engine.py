@@ -1,17 +1,10 @@
 import time
 import PidControler
 
-def calculate_force_F(target,now_status):
-    kp=0.1
-    err=target-now_status
-    f=err*kp
-    return f
-
-
 m=1
 g=10
 u=0.1
-v=10
+v=0
 dt=0.01
 s=0
 all_time=0
