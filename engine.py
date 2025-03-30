@@ -1,7 +1,7 @@
 import time
 
 def calculate_force_F(target,now_status):
-    kp=1
+    kp=0.01
     err=target-now_status
     f=err*kp
     return f
@@ -16,7 +16,7 @@ s=0
 all_time=0
 turn_off=True
 
-aim_target=10
+aim_target=100
 
 while turn_off:
 
@@ -46,5 +46,5 @@ while turn_off:
         all_time=all_time+dt
     print(f"\r time:{format(all_time,'4.4f')} {format(s,'4.8f')} {format(v,'4.8f')} {format(a,'4.8f')}",end="")
 
-    if all_time>15:
+    if all_time>100:
         turn_off=False
