@@ -7,8 +7,8 @@ v=1
 dt=0.01
 s=0
 all_time=0
-turn_off=False
-while ~turn_off:
+turn_off=True
+while turn_off:
     f=0
     if v!=0:
         f=m*g*u*abs(v)/v*-1
@@ -31,4 +31,4 @@ while ~turn_off:
     print(f"\r time:{format(all_time,'4.4f')} {s} {v} {a}",end="")
 
     if all_time>10:
-        turn_off=True
+        turn_off=False
