@@ -1,7 +1,7 @@
 import time
 
 def calculate_force_F(target,now_status):
-    kp=0.01
+    kp=0.1
     err=target-now_status
     f=err*kp
     return f
@@ -23,16 +23,16 @@ while running:
 
     add_f=calculate_force_F(aim_target,s)
 
-    f=0
+    f1=0
     if v!=0:
-        f=m*g*u*abs(v)/v*-1
+        f1=m*g*u*abs(v)/v*-1
     elif  add_f!=0:
-        f=m*g*u*abs(add_f)/add_f*-1
-        if abs(add_f)<abs(f):
-            f=-1*add_f
+        f1=m*g*u*abs(add_f)/add_f*-1
+        if abs(add_f)<abs(f1):
+            f1=-1*add_f
 
     
-    f=f+add_f
+    f=f1+add_f
 
     a=f/m
     v0=v
@@ -50,7 +50,7 @@ while running:
     else:
         time.time(dt)
         all_time=all_time+dt
-    print(f"\r time:{format(all_time,'4.4f')} s={format(s,'4.8f')} v={format(v,'4.8f')} a={format(a,'4.8f')}",end="")
+    print(f"\r time:{format(all_time,'4.4f')} s={format(s,'4.8f')} v={format(v,'4.8f')} a={format(a,'4.8f')}")
 
     if all_time>100:
         running=False
